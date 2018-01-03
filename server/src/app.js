@@ -8,13 +8,13 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/status',(req,res) => {
+app.post('/register',(req,res) => {
     res.json({
-        message:'Full stack Developer'
+        message:`Hello ${req.body.email}! Your user has registered! have fun`
     })
 })
 
-app.listen(2000);
+app.listen(8081);
 
 
 
